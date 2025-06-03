@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yellow & Brown Portfolio</title>
+  <style>
+    /* Root Colors */
+    :root {
+      --main-bg: #4e342e;        
+      --accent: #fbc02d;        
+      --text: #fff8e1;        
+    }
+
+    body, h1, h2, p, a {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+    }
+
+    body {
+      background-color: var(--main-bg);
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--accent);
+      color: var(--main-bg);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .navbar a {
+      color: var(--main-bg);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: white;
+    }
+
+    /* Header with image */
+    .header {
+      margin-top: 70px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 180px;
+      border-radius: 50%;
+      filter: sepia(40%);
+      box-shadow: 0 0 15px #00000055;
+    }
+
+    /* Table */
+    table {
+      width: 60%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background-color: #6d4c41;
+    }
+
+    th, td {
+      border: 1px solid var(--accent);
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: var(--accent);
+      color: var(--main-bg);
+    }
+
+    /* Text over image */
+    .text-over-image {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+
+    .text-over-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--main-bg);
+      background: rgba(255, 235, 59, 0.8);
+      padding: 10px 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    /* Two columns */
+    .columns {
+      display: flex;
+      justify-content: center;
+      margin: 30px;
+      gap: 20px;
+    }
+
+    .column {
+      width: 40%;
+      height: 200px;
+      padding: 20px;
+      background-color: #3e2723;
+      color: var(--accent);
+    }
+
+    /* Paragraph hover effect */
+    .hover-effect {
+      text-align: center;
+      margin: 40px;
+      transition: color 0.3s ease;
+    }
+
+    .hover-effect:hover {
+      color: var(--accent);
+    }
+
+    /* Image overlay fade */
+    .image-container {
+      position: relative;
+      width: 200px;
+      margin: 30px auto;
+    }
+
+    .fade-image {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .fade-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0);
+      color: var(--accent);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.4s ease;
+      font-weight: bold;
+    }
+
+    .image-container:hover .fade-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Autoplay video */
+    .autoplay-video {
+      display: block;
+      margin: 30px auto;
+      width: 80%;
+      max-width: 800px;
+      border: 4px solid var(--accent);
+    }
+
+    /* Video with overlay text */
+    .video-wrapper {
+      position: relative;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      border: 4px solid var(--accent);
+    }
+
+    .video-text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--main-bg);
+      font-size: 2rem;
+      background-color: rgba(251, 192, 45, 0.8);
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #3e2723;
+      color: var(--accent);
+      text-align: center;
+      font-weight: bold;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#media">Media</a>
+  </nav>
+
+  <!-- Header Image -->
+  <header class="header">
+    <img src="https://cdn.pixabay.com/photo/2019/09/19/07/26/extreme-4488462_1280.jpg" alt="Profile Image" class="profile-img">
+  </header>
+ <!-- Two Columns -->
+  <section class="columns" id="about">
+    <div class="column">Left Column: About Me</div>
+    <div class="column">Right Column: Work Experience</div>
+  </section>
+
+  <!-- Table -->
+  <section id="skills">
+    <h2 style="text-align:center; margin: 30px;">Skills Table</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Advanced</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Text over image -->
+  <section class="text-over-image" id="media">
+    <img src="https://cdn.pixabay.com/photo/2013/03/02/05/02/death-valley-89261_1280.jpg" alt="Background">
+    <div class="text-overlay">Welcome to My Portfolio</div>
+  </section>
+
+ 
+  <!-- Paragraph hover -->
+  <p class="hover-effect">Hover over this text to see the color change effect.</p>
+
+  <!-- Image overlay fade -->
+  <div class="image-container">
+    <img src="https://cdn.pixabay.com/photo/2013/03/02/05/02/death-valley-89261_1280.jpg" alt="Hover" class="fade-image">
+    <div class="fade-overlay">Hovered!</div>
+  </div>
+
+  <!-- Autoplay Mute Loop Video -->
+  <section>
+    <video autoplay muted loop class="autoplay-video">
+      <source src="https://cdn.pixabay.com/video/2017/07/23/10797-226624921_tiny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Video with overlay -->
+  <div class="video-wrapper">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2017/07/23/10797-226624921_tiny.mp4" type="video/mp4">
+    </video>
+    <div class="video-text">Creative Work</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Riadh Ablahhad. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
